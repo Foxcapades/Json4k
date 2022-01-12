@@ -10,17 +10,9 @@ import java.util.ServiceLoader
  * @since v1.0.0
  */
 object Json {
-  private val factory: JsonFactory
-
-  init {
-    val loader = ServiceLoader.load(JsonFactory::class.java)!!
-    val found  = loader.stream().findFirst()
-
-    if (found.isEmpty)
-      throw RuntimeException("No implementation of json4k found.")
-
-    factory = found.get().get()
-  }
+  private val factory: JsonFactory =
+    ServiceLoader.load(JsonFactory::class.java)!!.firstOrNull()
+      ?: throw RuntimeException("No implementation of json4k found.")
 
   /**
    * Creates a new Json array element.
