@@ -1,5 +1,9 @@
 = Json4k
 
+image:https://img.shields.io/badge/jvm-1.8-red[]
+image:https://img.shields.io/badge/kotlin-1.6.10-green[]
+image:https://img.shields.io/maven-central/v/io.foxcapades.lib/json4k[Maven Central, link="https://search.maven.org/artifact/io.foxcapades.lib/json4k"]
+
 Provides an abstraction over Json libraries to allow generic Json creation
 without binding to any specific Json implementation.
 
