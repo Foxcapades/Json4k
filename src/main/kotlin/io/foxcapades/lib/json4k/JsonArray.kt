@@ -1084,7 +1084,7 @@ interface JsonArray : JsonElement, Iterable<JsonElement> {
    *
    * @return Whether this [JsonArray] contains a [JsonNull] element.
    */
-  fun containsNull()
+  fun containsNull(): Boolean
 
   // endregion
 }
