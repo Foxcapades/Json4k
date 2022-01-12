@@ -61,7 +61,7 @@ publishing {
       pom {
         name.set("Json4k")
         description.set("Json creation abstraction for Kotlin.")
-        url.set("https://github.com/Foxcapades/lib-json-serial")
+        url.set("https://github.com/Foxcapades/Json4k")
         developers {
           developer {
             id.set("epharper")
@@ -77,9 +77,9 @@ publishing {
           }
         }
         scm {
-          connection.set("scm:git:git://github.com/Foxcapades/lib-json-serial.git")
-          developerConnection.set("scm:git:ssh://github.com/Foxcapades/lib-json-serial.git")
-          url.set("https://github.com/Foxcapades/lib-json-serial")
+          connection.set("scm:git:git://github.com/Foxcapades/Json4k.git")
+          developerConnection.set("scm:git:ssh://github.com/Foxcapades/Json4k.git")
+          url.set("https://github.com/Foxcapades/Json4k")
         }
       }
     }

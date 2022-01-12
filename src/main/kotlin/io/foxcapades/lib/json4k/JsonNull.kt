@@ -1,4 +1,8 @@
 package io.foxcapades.lib.json4k
 
-interface JsonNull : JsonElement {
-}
+/**
+ * Represents a Json `null` element.
+ *
+ * @since v1.0.0
+ */
+interface JsonNull : JsonElement
