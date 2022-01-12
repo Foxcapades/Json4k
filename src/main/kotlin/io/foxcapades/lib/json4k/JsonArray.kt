@@ -8,7 +8,7 @@ import java.math.BigInteger
  *
  * @since v1.0.0
  */
-interface JsonArray : JsonElement, Iterator<JsonElement> {
+interface JsonArray : JsonElement, Iterable<JsonElement> {
   /**
    * Number of elements contained in this [JsonArray].
    */
