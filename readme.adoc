@@ -1,0 +1,6 @@
+= Json4k
+
+Provides an abstraction over Json libraries to allow generic Json creation
+without binding to any specific Json implementation.
+
+
