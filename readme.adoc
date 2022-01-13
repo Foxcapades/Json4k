@@ -8,3 +8,12 @@ Provides an abstraction over Json libraries to allow generic Json creation
 without binding to any specific Json implementation.
 
 
+== Implementations
+
+
+[cols=2]
+|===
+| FasterXML Jackson
+| https://github.com/Foxcapades/Json4k-Jackson[Json4k Jackson]
+
+|===
