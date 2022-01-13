@@ -5,7 +5,7 @@ package io.foxcapades.lib.json4k
  *
  * @since v1.0.0
  */
-interface JsonString {
+interface JsonString : JsonElement {
   /**
    * The length of the string wrapped by this [JsonString] element.
    *
