@@ -1,5 +1,7 @@
 package io.foxcapades.lib.json4k
 
+import java.io.InputStream
+import java.io.Reader
 import java.math.BigDecimal
 import java.math.BigInteger
 import java.util.ServiceLoader
@@ -164,5 +166,11 @@ object Json {
    * @return A new Json string element.
    */
   fun newString(value: String) = factory.newString(value)
+
+  fun deserialize(stream: InputStream) = factory.deserialize(stream)
+
+  fun deserialize(reader: Reader) = factory.deserialize(reader)
+
+  fun deserialize(string: String) = factory.deserialize(string)
 
 }

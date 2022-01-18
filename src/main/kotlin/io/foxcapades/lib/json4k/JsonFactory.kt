@@ -1,5 +1,7 @@
 package io.foxcapades.lib.json4k
 
+import java.io.InputStream
+import java.io.Reader
 import java.math.BigDecimal
 import java.math.BigInteger
 
@@ -163,4 +165,10 @@ interface JsonFactory {
    * @return A new Json string element.
    */
   fun newString(value: String): JsonString
+
+  fun deserialize(stream: InputStream): JsonElement
+
+  fun deserialize(reader: Reader): JsonElement
+
+  fun deserialize(string: String): JsonElement
 }
