@@ -26,6 +26,22 @@ object Json {
   fun newArray(initialSize: Int = 1) = factory.newArray(initialSize)
 
   /**
+   * Creates a new Json array element, then executes the given action on that
+   * element.
+   *
+   * @param initialSize Initial size to create the Json array at.
+   *
+   * @param action Action to execute on the newly created array element.
+   *
+   * @return The new Json array element.
+   *
+   * @since v1.3.0
+   */
+  inline fun newArray(initialSize: Int = 1, action: JsonArray.() -> Unit): JsonArray {
+    return newArray(initialSize).apply(action)
+  }
+
+  /**
    * Creates a new Json boolean element.
    *
    * @param value Value to be wrapped by the new element.
@@ -159,6 +175,22 @@ object Json {
   fun newObject(initialSize: Int = 1) = factory.newObject()
 
   /**
+   * Creates a new Json object element, then executes the given action on that
+   * element.
+   *
+   * @param initialSize Initial size to create the Json object at.
+   *
+   * @param action Action to execute on the newly created object element.
+   *
+   * @return The new Json object element.
+   *
+   * @since v1.3.0
+   */
+  inline fun newObject(initialSize: Int = 1, action: JsonObject.() -> Unit): JsonObject {
+    return newObject(initialSize).apply(action)
+  }
+
+  /**
    * Creates a new Json string element.
    *
    * @param value Value to be wrapped by the new element.
@@ -167,10 +199,24 @@ object Json {
    */
   fun newString(value: String) = factory.newString(value)
 
+  /**
+   * Deserializes the given [InputStream] into a [JsonElement].
+   *
+   * @since v1.1.0
+   */
   fun deserialize(stream: InputStream) = factory.deserialize(stream)
 
+  /**
+   * Deserializes the given [Reader] into a [JsonElement].
+   *
+   * @since v1.1.0
+   */
   fun deserialize(reader: Reader) = factory.deserialize(reader)
 
+  /**
+   * Deserializes the given [String] into a [JsonElement].
+   *
+   * @since v1.1.0
+   */
   fun deserialize(string: String) = factory.deserialize(string)
-
 }

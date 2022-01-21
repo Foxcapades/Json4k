@@ -166,9 +166,24 @@ interface JsonFactory {
    */
   fun newString(value: String): JsonString
 
+  /**
+   * Deserializes the given [InputStream] into a [JsonElement].
+   *
+   * @since v1.1.0
+   */
   fun deserialize(stream: InputStream): JsonElement
 
+  /**
+   * Deserializes the given [Reader] into a [JsonElement].
+   *
+   * @since v1.1.0
+   */
   fun deserialize(reader: Reader): JsonElement
 
+  /**
+   * Deserializes the given [String] into a [JsonElement].
+   *
+   * @since v1.1.0
+   */
   fun deserialize(string: String): JsonElement
 }

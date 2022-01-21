@@ -9,6 +9,8 @@ sealed interface JsonNumeric : JsonElement {
 
   /**
    * Indicates whether the numeric value is an integral number.
+   *
+   * @since v1.2.0
    */
   val isIntegral: Boolean
 
